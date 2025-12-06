@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Inter } from 'next/font/google';
 import Navbar from '../components/Navbar';
-
+import BackgroundSliderTailwind from '../components/BackgroundSliderTailwind';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -26,7 +26,8 @@ export default function RootLayout({
     <html lang="en" className={inter.variable}>
        <body>
         <Navbar />
-        <main className="container mx-auto px-4 py-0 mt-0">
+        
+        <main className="container mx-0 px-0 py-0 mt-0">
             {children}
         </main>
       </body>

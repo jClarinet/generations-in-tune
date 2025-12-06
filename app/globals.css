@@ -9,11 +9,13 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-primary: #260C1A;        /* Use as .bg-primary, .text-primary, etc. */
-  --color-secondary: #432E36;      /* Use as .bg-secondary, .text-secondary */
-  --color-third: #5F4842;    /* Or just use existing gray classes */
-  --color-fourth: #AF8D86;
-  --color-lightcolor: #EDBFC6;
+  --color-primary: #22031F;        /* Use as .bg-primary, .text-primary, etc. */
+  --color-secondary: #CC76A1;      /* Use as .bg-secondary, .text-secondary */
+  --color-third: #E690AE;    /* Or just use existing gray classes */
+  --color-fourth: #F3B9CB;
+  --color-lightcolor: #FFE1E7;
+  --color-medium: #773D60;
+  --color-lightercolor: #F9CDD9;
   --font-sans: var(--font-inter);
   --font-mono: var(--font-inter);
 }
@@ -26,9 +28,10 @@
 }
 
 body {
+  margin: 0;
+  padding: 0;
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-inter);
-  margin: 0;
-  padding: 0
+
 }

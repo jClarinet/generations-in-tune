@@ -1,22 +1,56 @@
 import Image from "next/image";
-
+import BackgroundSliderTailwind from '../components/BackgroundSliderTailwind';
+import { YouTubeEmbed } from '@next/third-parties/google'
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-secondary font-sans ">
+    <div className="flex min-h-screen items-center justify-center bg-secondary font-sans w-screen">
       <main className="flex min-h-screen w-full  flex-col items-center justify-between">
         <div className="relative h-screen w-screen">
-          <div className="absolute inset-0 bg-[url('/genintunepic.webp')] bg-cover bg-center  justify-center"></div>
-          <div className="absolute inset-0 bg-lightcolor/50"></div> 
-          <div className="relative z-10 flex h-full mt-20 justify-center items-center flex-col">
-
-              <h1 className="text-primary text-6xl font-bold p-10">
+        
+          <div className="absolute inset-0">
+          <BackgroundSliderTailwind/>
+          </div> 
+          
+          <div className="relative z-10 flex  mt-20 justify-center items-center flex-col">
+              
+              <h1 className="text-primary text-6xl font-bold p-5">
                 Generations in Tune
               </h1>
-              <h2 className="text-secondary text-3xl font-bold p-10">
+              <h2 className="text-medium text-2xl font-bold ">
                 Connecting Generations Through Music
               </h2>
+              <div className="size-100"><img src="generationslogo.png" alt="" /></div>
+              
           </div>
+          
+          
+
+
         </div>
+        <div className="bg-lightcolor relative h-150 w-screen">
+          <div className="mt-20 justify-center items-center flex-col flex ">
+          <h1 className="text-4xl text-primary">Our Mission</h1>
+          <p className="text-m text-medium p-5 ml-10">Generations in Tune is a student-led 501(c)(3) non-profit organization based in Maryland. We believe that music has the power to bring people together and create meaningful connections. Our mission is to connect seniors and young musicians through hosting senior center concerts, offering music lessons, and encouraging community interactions. Let's make a difference in the lives of others through music!</p>
+          </div>
+          <div className="mt-20 justify-center items-center flex-col flex  ">
+          <h1 className="text-4xl text-primary">About Us</h1>
+          <p className="text-m text-medium p-5 ml-10">Generations in Tune is a community of people who share a love for music and hold the bigger picture in their minds: to share the joy of music with others. Founded in the summer of 2022, Generations in Tune has grown to include numerous volunteer performing musicians and artists. Our group of student volunteers found a way to bring live performances to seniors who otherwise would not have the opportunity to experience them</p>
+          </div>
+          
+              
+          </div>
+          <div className="bg-fourth relative h-150 w-screen flex flex-col items-center justify-center">
+            <h1 className="text-2xl text-primary p-5">Our music, our community, and our volunteers.</h1>
+          <YouTubeEmbed 
+            videoid="-jUKQTiPGTI" 
+            height={400} 
+            width={600} 
+        // You can add more props like 'params="controls=0&loop=1"'
+      />
+          </div>
+          
+        
+
       </main>
     </div>
   );
