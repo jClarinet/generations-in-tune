@@ -1,7 +1,7 @@
 // components/TeamCard.tsx
 import React from 'react';
-import Image from 'next/image'; // Next.js Image component for optimization
-import {TeamMember}  from '../data/teamData'; // Import the type definition
+import { TeamMember } from '../data/teamData'; 
+import CircleImage from './CircleImage'; // Import the new component
 
 interface TeamCardProps {
   member: TeamMember;
@@ -9,19 +9,18 @@ interface TeamCardProps {
 
 const TeamCard: React.FC<TeamCardProps> = ({ member }) => {
   return (
-    <div className="max-w-sm rounded-lg shadow-lg overflow-hidden bg-white transform transition duration-500 hover:scale-105">
-      <div className="relative h-100 w-full">
-        <Image
-          src={member.imageUrl}
-          alt={`Picture of ${member.name}`}
-          layout="fill" // Makes the image fill the parent container
-          objectFit="contain" // Ensures the image covers the area without stretching
-        />
+    <div className="max-w-sm rounded-lg overflow-hidden bg-white">
+      
+      {/* Container to center the image within the top of the card */}
+      <div className="flex justify-center items-center py-6 bg-white hover:scale-115 transform transition duration-300"> 
+        {/* Pass the standard Tailwind size classes here */}
+        <CircleImage src={member.imageUrl} alt={`Picture of ${member.name}`} className="w-50 h-50" />
       </div>
+      
       <div className="p-6">
-        <h3 className="text-xl font-semibold text-gray-800 mb-1">{member.name}</h3>
-        <p className="text-primary font-medium mb-3">{member.role}</p>
-        <p className="text-secondary text-sm">{member.bio}</p>
+        <h3 className="text-2xl text-primary mb-1 flex items-center justify-center">{member.name}</h3>
+        <p className="text-primary font-xl mb-3 flex items-center justify-center">{member.role}</p>
+        <p className="text-secondary w-80 tracking-wide text-l flex items-center justify-center">{member.bio}</p>
       </div>
     </div>
   );

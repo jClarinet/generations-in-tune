@@ -4,7 +4,7 @@ import "./globals.css";
 import { Inter } from 'next/font/google';
 import Navbar from '../components/Navbar';
 import BackgroundSliderTailwind from '../components/BackgroundSliderTailwind';
-
+import Footer from '../components/Footer';
 const inter = Inter({
   subsets: ['latin'],
   // Define a CSS variable name for use in Tailwind
@@ -30,6 +30,7 @@ export default function RootLayout({
         <main className="container mx-0 px-0 py-0 mt-0">
             {children}
         </main>
+        <Footer />
       </body>
     </html>
   );
